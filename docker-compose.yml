@@ -2,6 +2,7 @@ version: '3'
 
 services:  
   web73:
+    container_name: web
     build:
       context: .
       dockerfile: ./Dockerfile
@@ -21,6 +22,7 @@ services:
     links:
       - mysql57
   mysql57:
+    container_name: db
     image: 'mysql:5.7.25'
     volumes:
       - "./data:/var/lib/mysql:rw"
